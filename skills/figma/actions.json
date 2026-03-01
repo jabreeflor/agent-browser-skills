@@ -1,0 +1,748 @@
+{
+  "select-move-tool": {
+    "description": "Select the Move tool",
+    "steps": [
+      {"action": "press", "key": "v"}
+    ]
+  },
+  "select-frame-tool": {
+    "description": "Select the Frame tool",
+    "steps": [
+      {"action": "press", "key": "f"}
+    ]
+  },
+  "select-rectangle-tool": {
+    "description": "Select the Rectangle tool",
+    "steps": [
+      {"action": "press", "key": "r"}
+    ]
+  },
+  "select-ellipse-tool": {
+    "description": "Select the Ellipse tool",
+    "steps": [
+      {"action": "press", "key": "o"}
+    ]
+  },
+  "select-line-tool": {
+    "description": "Select the Line tool",
+    "steps": [
+      {"action": "press", "key": "l"}
+    ]
+  },
+  "select-pen-tool": {
+    "description": "Select the Pen tool",
+    "steps": [
+      {"action": "press", "key": "p"}
+    ]
+  },
+  "select-text-tool": {
+    "description": "Select the Text tool",
+    "steps": [
+      {"action": "press", "key": "t"}
+    ]
+  },
+  "select-hand-tool": {
+    "description": "Select the Hand tool for panning",
+    "steps": [
+      {"action": "press", "key": "h"}
+    ]
+  },
+  "create-rectangle": {
+    "description": "Create a rectangle with specified dimensions",
+    "params": ["width", "height"],
+    "steps": [
+      {"action": "press", "key": "r"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.widthInput", "value": "{{width}}"},
+      {"action": "press", "key": "Tab"},
+      {"action": "fill", "selector": "properties.heightInput", "value": "{{height}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "create-ellipse": {
+    "description": "Create an ellipse with specified dimensions",
+    "params": ["width", "height"],
+    "steps": [
+      {"action": "press", "key": "o"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.widthInput", "value": "{{width}}"},
+      {"action": "press", "key": "Tab"},
+      {"action": "fill", "selector": "properties.heightInput", "value": "{{height}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "create-frame": {
+    "description": "Create a frame with specified dimensions",
+    "params": ["width", "height"],
+    "steps": [
+      {"action": "press", "key": "f"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.widthInput", "value": "{{width}}"},
+      {"action": "press", "key": "Tab"},
+      {"action": "fill", "selector": "properties.heightInput", "value": "{{height}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "create-text": {
+    "description": "Create a text layer with content",
+    "params": ["content"],
+    "steps": [
+      {"action": "press", "key": "t"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "canvas.activeTextInput", "value": "{{content}}"},
+      {"action": "press", "key": "Escape"}
+    ]
+  },
+  "create-line": {
+    "description": "Create a line on the canvas",
+    "steps": [
+      {"action": "press", "key": "l"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200}
+    ]
+  },
+  "set-position": {
+    "description": "Set X and Y position of the selected element",
+    "params": ["x", "y"],
+    "steps": [
+      {"action": "fill", "selector": "properties.xInput", "value": "{{x}}"},
+      {"action": "press", "key": "Tab"},
+      {"action": "fill", "selector": "properties.yInput", "value": "{{y}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-size": {
+    "description": "Set width and height of the selected element",
+    "params": ["width", "height"],
+    "steps": [
+      {"action": "fill", "selector": "properties.widthInput", "value": "{{width}}"},
+      {"action": "press", "key": "Tab"},
+      {"action": "fill", "selector": "properties.heightInput", "value": "{{height}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-corner-radius": {
+    "description": "Set corner radius of the selected element",
+    "params": ["radius"],
+    "steps": [
+      {"action": "fill", "selector": "properties.cornerRadiusInput", "value": "{{radius}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-rotation": {
+    "description": "Set rotation angle of the selected element",
+    "params": ["degrees"],
+    "steps": [
+      {"action": "fill", "selector": "properties.rotationInput", "value": "{{degrees}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-opacity": {
+    "description": "Set opacity of the selected element (0-100)",
+    "params": ["opacity"],
+    "steps": [
+      {"action": "fill", "selector": "properties.opacityInput", "value": "{{opacity}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-fill-color": {
+    "description": "Set the fill color of the selected element",
+    "params": ["hex"],
+    "steps": [
+      {"action": "click", "selector": "fill.colorSwatch"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "colorPicker.hexInput", "value": "{{hex}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Escape"}
+    ]
+  },
+  "add-fill": {
+    "description": "Add a new fill to the selected element",
+    "steps": [
+      {"action": "click", "selector": "fill.addButton"}
+    ]
+  },
+  "remove-fill": {
+    "description": "Remove the fill from the selected element",
+    "steps": [
+      {"action": "click", "selector": "fill.removeButton"}
+    ]
+  },
+  "set-stroke-color": {
+    "description": "Set the stroke color of the selected element",
+    "params": ["hex"],
+    "steps": [
+      {"action": "click", "selector": "stroke.colorSwatch"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "colorPicker.hexInput", "value": "{{hex}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Escape"}
+    ]
+  },
+  "add-stroke": {
+    "description": "Add a stroke to the selected element",
+    "steps": [
+      {"action": "click", "selector": "stroke.addButton"}
+    ]
+  },
+  "set-stroke-weight": {
+    "description": "Set stroke weight of the selected element",
+    "params": ["weight"],
+    "steps": [
+      {"action": "fill", "selector": "stroke.weightInput", "value": "{{weight}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "add-drop-shadow": {
+    "description": "Add a drop shadow effect to the selected element",
+    "steps": [
+      {"action": "click", "selector": "effects.addButton"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "effects.effectTypeDropdown"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "effects.dropShadowOption"}
+    ]
+  },
+  "add-blur": {
+    "description": "Add a blur effect to the selected element",
+    "steps": [
+      {"action": "click", "selector": "effects.addButton"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "effects.effectTypeDropdown"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "effects.blurOption"}
+    ]
+  },
+  "set-font-family": {
+    "description": "Set the font family of the selected text",
+    "params": ["fontName"],
+    "steps": [
+      {"action": "click", "selector": "text.fontFamily"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "text.fontFamily", "value": "{{fontName}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-font-size": {
+    "description": "Set the font size of the selected text",
+    "params": ["size"],
+    "steps": [
+      {"action": "fill", "selector": "text.fontSize", "value": "{{size}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-font-weight": {
+    "description": "Set the font weight of the selected text",
+    "params": ["weight"],
+    "steps": [
+      {"action": "click", "selector": "text.fontWeight"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "text.fontWeightOption"}
+    ]
+  },
+  "set-line-height": {
+    "description": "Set the line height of the selected text",
+    "params": ["value"],
+    "steps": [
+      {"action": "fill", "selector": "text.lineHeight", "value": "{{value}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-letter-spacing": {
+    "description": "Set the letter spacing of the selected text",
+    "params": ["value"],
+    "steps": [
+      {"action": "fill", "selector": "text.letterSpacing", "value": "{{value}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "text-align-left": {
+    "description": "Align text to the left",
+    "steps": [
+      {"action": "click", "selector": "text.alignLeft"}
+    ]
+  },
+  "text-align-center": {
+    "description": "Center-align text",
+    "steps": [
+      {"action": "click", "selector": "text.alignCenter"}
+    ]
+  },
+  "text-align-right": {
+    "description": "Align text to the right",
+    "steps": [
+      {"action": "click", "selector": "text.alignRight"}
+    ]
+  },
+  "bold-text": {
+    "description": "Toggle bold on selected text",
+    "steps": [
+      {"action": "press", "key": "Meta+b"}
+    ]
+  },
+  "italic-text": {
+    "description": "Toggle italic on selected text",
+    "steps": [
+      {"action": "press", "key": "Meta+i"}
+    ]
+  },
+  "underline-text": {
+    "description": "Toggle underline on selected text",
+    "steps": [
+      {"action": "press", "key": "Meta+u"}
+    ]
+  },
+  "add-auto-layout": {
+    "description": "Add auto layout to the selected frame",
+    "steps": [
+      {"action": "press", "key": "Shift+a"}
+    ]
+  },
+  "remove-auto-layout": {
+    "description": "Remove auto layout from the selected frame",
+    "steps": [
+      {"action": "click", "selector": "autoLayout.removeButton"}
+    ]
+  },
+  "set-auto-layout-horizontal": {
+    "description": "Set auto layout direction to horizontal",
+    "steps": [
+      {"action": "click", "selector": "autoLayout.horizontalButton"}
+    ]
+  },
+  "set-auto-layout-vertical": {
+    "description": "Set auto layout direction to vertical",
+    "steps": [
+      {"action": "click", "selector": "autoLayout.verticalButton"}
+    ]
+  },
+  "set-auto-layout-gap": {
+    "description": "Set the gap between items in auto layout",
+    "params": ["gap"],
+    "steps": [
+      {"action": "fill", "selector": "autoLayout.gapInput", "value": "{{gap}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-auto-layout-padding": {
+    "description": "Set the padding in auto layout",
+    "params": ["padding"],
+    "steps": [
+      {"action": "fill", "selector": "autoLayout.paddingInput", "value": "{{padding}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "set-resizing-hug": {
+    "description": "Set resizing mode to hug contents",
+    "steps": [
+      {"action": "click", "selector": "autoLayout.hugButton"}
+    ]
+  },
+  "set-resizing-fill": {
+    "description": "Set resizing mode to fill container",
+    "steps": [
+      {"action": "click", "selector": "autoLayout.fillButton"}
+    ]
+  },
+  "group-selection": {
+    "description": "Group selected layers",
+    "steps": [
+      {"action": "press", "key": "Meta+g"}
+    ]
+  },
+  "ungroup-selection": {
+    "description": "Ungroup selected group",
+    "steps": [
+      {"action": "press", "key": "Meta+Shift+g"}
+    ]
+  },
+  "frame-selection": {
+    "description": "Wrap selection in a frame",
+    "steps": [
+      {"action": "press", "key": "Meta+Alt+g"}
+    ]
+  },
+  "create-component": {
+    "description": "Create a component from the selection",
+    "steps": [
+      {"action": "press", "key": "Meta+Alt+k"}
+    ]
+  },
+  "detach-instance": {
+    "description": "Detach a component instance",
+    "steps": [
+      {"action": "press", "key": "Meta+Alt+b"}
+    ]
+  },
+  "duplicate": {
+    "description": "Duplicate the selected element",
+    "steps": [
+      {"action": "press", "key": "Meta+d"}
+    ]
+  },
+  "delete": {
+    "description": "Delete the selected element",
+    "steps": [
+      {"action": "press", "key": "Backspace"}
+    ]
+  },
+  "rename-layer": {
+    "description": "Rename the selected layer",
+    "params": ["name"],
+    "steps": [
+      {"action": "press", "key": "Meta+r"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "layersPanel.renameInput", "value": "{{name}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "bring-to-front": {
+    "description": "Bring selected layer to front",
+    "steps": [
+      {"action": "press", "key": "Meta+]"}
+    ]
+  },
+  "send-to-back": {
+    "description": "Send selected layer to back",
+    "steps": [
+      {"action": "press", "key": "Meta+["}
+    ]
+  },
+  "lock-layer": {
+    "description": "Toggle lock on the selected layer",
+    "steps": [
+      {"action": "press", "key": "Meta+Shift+l"}
+    ]
+  },
+  "hide-layer": {
+    "description": "Toggle visibility of the selected layer",
+    "steps": [
+      {"action": "press", "key": "Meta+Shift+h"}
+    ]
+  },
+  "align-left": {
+    "description": "Align selection to the left",
+    "steps": [
+      {"action": "click", "selector": "designPanel.alignLeft"}
+    ]
+  },
+  "align-center-h": {
+    "description": "Align selection to horizontal center",
+    "steps": [
+      {"action": "click", "selector": "designPanel.alignCenterH"}
+    ]
+  },
+  "align-right": {
+    "description": "Align selection to the right",
+    "steps": [
+      {"action": "click", "selector": "designPanel.alignRight"}
+    ]
+  },
+  "align-top": {
+    "description": "Align selection to the top",
+    "steps": [
+      {"action": "click", "selector": "designPanel.alignTop"}
+    ]
+  },
+  "align-center-v": {
+    "description": "Align selection to vertical center",
+    "steps": [
+      {"action": "click", "selector": "designPanel.alignCenterV"}
+    ]
+  },
+  "align-bottom": {
+    "description": "Align selection to the bottom",
+    "steps": [
+      {"action": "click", "selector": "designPanel.alignBottom"}
+    ]
+  },
+  "zoom-to-fit": {
+    "description": "Zoom to fit all content",
+    "steps": [
+      {"action": "press", "key": "Meta+1"}
+    ]
+  },
+  "zoom-to-selection": {
+    "description": "Zoom to fit the current selection",
+    "steps": [
+      {"action": "press", "key": "Meta+2"}
+    ]
+  },
+  "zoom-100": {
+    "description": "Zoom to 100%",
+    "steps": [
+      {"action": "press", "key": "Meta+0"}
+    ]
+  },
+  "zoom-in": {
+    "description": "Zoom in",
+    "steps": [
+      {"action": "press", "key": "Meta+="}
+    ]
+  },
+  "zoom-out": {
+    "description": "Zoom out",
+    "steps": [
+      {"action": "press", "key": "Meta+-"}
+    ]
+  },
+  "toggle-rulers": {
+    "description": "Toggle rulers visibility",
+    "steps": [
+      {"action": "press", "key": "Meta+Shift+r"}
+    ]
+  },
+  "toggle-grid": {
+    "description": "Toggle grid visibility",
+    "steps": [
+      {"action": "press", "key": "Meta+'"}
+    ]
+  },
+  "export-selection": {
+    "description": "Open the export dialog for the selection",
+    "steps": [
+      {"action": "press", "key": "Meta+Shift+e"}
+    ]
+  },
+  "export-as-png": {
+    "description": "Export the selection as PNG",
+    "steps": [
+      {"action": "click", "selector": "export.addExportButton"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "export.formatDropdown"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "export.pngOption"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "export.exportButton"}
+    ]
+  },
+  "export-as-svg": {
+    "description": "Export the selection as SVG",
+    "steps": [
+      {"action": "click", "selector": "export.addExportButton"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "export.formatDropdown"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "export.svgOption"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "export.exportButton"}
+    ]
+  },
+  "boolean-union": {
+    "description": "Union selected shapes",
+    "steps": [
+      {"action": "click", "selector": "toolbar.booleanDropdown"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "toolbar.unionOption"}
+    ]
+  },
+  "boolean-subtract": {
+    "description": "Subtract selected shapes",
+    "steps": [
+      {"action": "click", "selector": "toolbar.booleanDropdown"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "toolbar.subtractOption"}
+    ]
+  },
+  "boolean-intersect": {
+    "description": "Intersect selected shapes",
+    "steps": [
+      {"action": "click", "selector": "toolbar.booleanDropdown"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "toolbar.intersectOption"}
+    ]
+  },
+  "boolean-exclude": {
+    "description": "Exclude overlapping areas of selected shapes",
+    "steps": [
+      {"action": "click", "selector": "toolbar.booleanDropdown"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "toolbar.excludeOption"}
+    ]
+  },
+  "flatten-selection": {
+    "description": "Flatten the selected layers",
+    "steps": [
+      {"action": "press", "key": "Meta+e"}
+    ]
+  },
+  "mask-selection": {
+    "description": "Use selection as mask",
+    "steps": [
+      {"action": "press", "key": "Meta+Alt+m"}
+    ]
+  },
+  "create-button-component": {
+    "description": "Create a reusable button component with label and background color",
+    "params": ["label", "bgColor"],
+    "steps": [
+      {"action": "press", "key": "f"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.widthInput", "value": "160"},
+      {"action": "press", "key": "Tab"},
+      {"action": "fill", "selector": "properties.heightInput", "value": "48"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.cornerRadiusInput", "value": "8"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "fill.colorSwatch"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "colorPicker.hexInput", "value": "{{bgColor}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Escape"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Shift+a"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "t"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "canvas.activeTextInput", "value": "{{label}}"},
+      {"action": "press", "key": "Escape"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Meta+Alt+k"}
+    ]
+  },
+  "create-card-layout": {
+    "description": "Create a card layout with title, rounded corners, and drop shadow",
+    "params": ["width", "title"],
+    "steps": [
+      {"action": "press", "key": "f"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.widthInput", "value": "{{width}}"},
+      {"action": "press", "key": "Tab"},
+      {"action": "fill", "selector": "properties.heightInput", "value": "280"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.cornerRadiusInput", "value": "12"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "effects.addButton"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "effects.effectTypeDropdown"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "effects.dropShadowOption"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Shift+a"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "autoLayout.paddingInput", "value": "24"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "autoLayout.gapInput", "value": "16"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "t"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "canvas.activeTextInput", "value": "{{title}}"},
+      {"action": "press", "key": "Escape"}
+    ]
+  },
+  "create-responsive-frame": {
+    "description": "Create a responsive frame with auto layout, padding, and gap",
+    "params": ["preset"],
+    "steps": [
+      {"action": "press", "key": "f"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Meta+r"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "layersPanel.renameInput", "value": "{{preset}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Shift+a"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "autoLayout.verticalButton"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "autoLayout.paddingInput", "value": "16"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "autoLayout.gapInput", "value": "12"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "create-icon-circle": {
+    "description": "Create a circular icon container with background color",
+    "params": ["size", "bgColor"],
+    "steps": [
+      {"action": "press", "key": "o"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.widthInput", "value": "{{size}}"},
+      {"action": "press", "key": "Tab"},
+      {"action": "fill", "selector": "properties.heightInput", "value": "{{size}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "fill.colorSwatch"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "colorPicker.hexInput", "value": "{{bgColor}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Escape"}
+    ]
+  },
+  "create-input-field": {
+    "description": "Create an input field component with placeholder text",
+    "params": ["placeholder", "width"],
+    "steps": [
+      {"action": "press", "key": "f"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.widthInput", "value": "{{width}}"},
+      {"action": "press", "key": "Tab"},
+      {"action": "fill", "selector": "properties.heightInput", "value": "44"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "stroke.addButton"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.cornerRadiusInput", "value": "6"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Shift+a"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "autoLayout.paddingInput", "value": "12"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "t"},
+      {"action": "click", "selector": "canvas.center"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "canvas.activeTextInput", "value": "{{placeholder}}"},
+      {"action": "press", "key": "Escape"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "properties.opacityInput", "value": "50"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "get-selection-size": {
+    "description": "Get the width and height of the current selection",
+    "returns": ["width", "height"],
+    "steps": [
+      {"action": "get", "type": "text", "selector": "properties.widthInput", "as": "width"},
+      {"action": "get", "type": "text", "selector": "properties.heightInput", "as": "height"}
+    ]
+  },
+  "get-selection-position": {
+    "description": "Get the X and Y position of the current selection",
+    "returns": ["x", "y"],
+    "steps": [
+      {"action": "get", "type": "text", "selector": "properties.xInput", "as": "x"},
+      {"action": "get", "type": "text", "selector": "properties.yInput", "as": "y"}
+    ]
+  },
+  "get-layer-name": {
+    "description": "Get the name of the currently selected layer",
+    "returns": ["name"],
+    "steps": [
+      {"action": "get", "type": "text", "selector": "layersPanel.selectedLayer", "as": "name"}
+    ]
+  }
+}

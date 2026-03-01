@@ -1,7 +1,7 @@
 {
   "name": "agent-browser-skills",
   "version": "1.0.0",
-  "description": "Custom skills for agent-browser - Spotify, Microsoft Teams, Discord, and Bruno automation",
+  "description": "Custom skills for agent-browser - Spotify, Microsoft Teams, Discord, Bruno, and Figma automation",
   "author": "jabreeflor",
   "license": "MIT",
   "repository": {
@@ -15,11 +15,14 @@
     "teams",
     "discord",
     "electron",
-    "ai-agent"
+    "ai-agent",
+    "figma"
   ],
   "skills": {
     "spotify": "./skills/spotify",
     "teams": "./skills/teams",
-    "discord": "./skills/discord"
+    "discord": "./skills/discord",
+    "bruno": "./skills/bruno",
+    "figma": "./skills/figma"
   }
 }

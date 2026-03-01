@@ -10,6 +10,7 @@ Custom skills for [agent-browser](https://github.com/vercel-labs/agent-browser) 
 | `teams` | Microsoft Teams | Messaging, meetings, channels, calls |
 | `discord` | Discord Desktop | Messaging, voice channels, servers, DMs, threads |
 | `bruno` | Bruno API Client | HTTP requests, collections, environments, testing |
+| `figma` | Figma Desktop | Design creation - shapes, frames, text, components, auto layout, export |
 
 ## Installation
 
@@ -25,6 +26,9 @@ npx agent-browser skills add jabreeflor/agent-browser-skills --skill discord
 
 # Add Bruno skill
 npx agent-browser skills add jabreeflor/agent-browser-skills --skill bruno
+
+# Add Figma skill
+npx agent-browser skills add jabreeflor/agent-browser-skills --skill figma
 ```
 
 ## Usage
@@ -143,6 +147,41 @@ agent-browser --skill bruno get-response-body
 # Collections
 agent-browser --skill bruno set-environment "production"
 agent-browser --skill bruno run-collection
+```
+
+### Figma
+
+```bash
+# Connect to Figma (must be running)
+agent-browser connect 9226
+
+# Create shapes
+agent-browser --skill figma create-rectangle 200 100
+agent-browser --skill figma create-ellipse 50 50
+agent-browser --skill figma create-frame 375 812
+
+# Style elements
+agent-browser --skill figma set-fill-color "#3B82F6"
+agent-browser --skill figma set-corner-radius 8
+agent-browser --skill figma set-opacity 0.9
+
+# Typography
+agent-browser --skill figma create-text "Hello World"
+agent-browser --skill figma set-font-family "Inter"
+agent-browser --skill figma set-font-size 16
+
+# Layout
+agent-browser --skill figma add-auto-layout
+agent-browser --skill figma set-auto-layout-gap 12
+agent-browser --skill figma set-auto-layout-padding 16
+
+# Components
+agent-browser --skill figma create-button-component "Sign Up" "#3B82F6"
+agent-browser --skill figma create-card-layout 320 "User Profile"
+
+# Export
+agent-browser --skill figma export-as-png
+agent-browser --skill figma export-as-svg
 ```
 
 ## Skill Structure

@@ -1,0 +1,29 @@
+{
+  "name": "figma",
+  "displayName": "Figma Desktop",
+  "version": "1.0.0",
+  "description": "Design creation in Figma Desktop - shapes, frames, text, components, layout, styles, layers, export",
+  "author": "jabreeflor",
+  "app": {
+    "name": "Figma",
+    "bundleId": "com.figma.Desktop",
+    "windowTitle": "Figma",
+    "process": ["Figma", "figma"]
+  },
+  "connection": {
+    "type": "electron",
+    "port": 9226,
+    "launchArgs": ["--remote-debugging-port=9226"]
+  },
+  "capabilities": [
+    "shapes",
+    "frames",
+    "text",
+    "components",
+    "layout",
+    "styles",
+    "layers",
+    "export",
+    "plugins"
+  ]
+}
