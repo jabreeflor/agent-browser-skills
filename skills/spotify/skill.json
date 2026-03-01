@@ -1,0 +1,26 @@
+{
+  "name": "spotify",
+  "displayName": "Spotify Desktop",
+  "version": "1.0.0",
+  "description": "Control Spotify Desktop app - playback, search, playlists, library management",
+  "author": "jabreeflor",
+  "app": {
+    "name": "Spotify",
+    "bundleId": "com.spotify.client",
+    "windowTitle": "Spotify",
+    "process": ["Spotify", "spotify"]
+  },
+  "connection": {
+    "type": "electron",
+    "port": 9222,
+    "launchArgs": ["--remote-debugging-port=9222"]
+  },
+  "capabilities": [
+    "playback",
+    "search",
+    "playlists",
+    "library",
+    "queue",
+    "volume"
+  ]
+}

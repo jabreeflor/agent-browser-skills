@@ -1,0 +1,113 @@
+{
+  "play": {
+    "description": "Resume playback",
+    "steps": [
+      {"action": "click", "selector": "playback.playPauseButton", "condition": "aria-label contains 'Play'"}
+    ]
+  },
+  "pause": {
+    "description": "Pause playback",
+    "steps": [
+      {"action": "click", "selector": "playback.playPauseButton", "condition": "aria-label contains 'Pause'"}
+    ]
+  },
+  "toggle": {
+    "description": "Toggle play/pause",
+    "steps": [
+      {"action": "click", "selector": "playback.playPauseButton"}
+    ]
+  },
+  "next": {
+    "description": "Skip to next track",
+    "steps": [
+      {"action": "click", "selector": "playback.nextButton"}
+    ]
+  },
+  "previous": {
+    "description": "Go to previous track",
+    "steps": [
+      {"action": "click", "selector": "playback.previousButton"}
+    ]
+  },
+  "shuffle": {
+    "description": "Toggle shuffle mode",
+    "steps": [
+      {"action": "click", "selector": "playback.shuffleButton"}
+    ]
+  },
+  "repeat": {
+    "description": "Toggle repeat mode",
+    "steps": [
+      {"action": "click", "selector": "playback.repeatButton"}
+    ]
+  },
+  "mute": {
+    "description": "Toggle mute",
+    "steps": [
+      {"action": "click", "selector": "playback.muteButton"}
+    ]
+  },
+  "search": {
+    "description": "Search for music",
+    "params": ["query"],
+    "steps": [
+      {"action": "click", "selector": "navigation.search"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "search.searchInput", "value": "{{query}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 500}
+    ]
+  },
+  "play-track": {
+    "description": "Search and play a specific track",
+    "params": ["trackName"],
+    "steps": [
+      {"action": "click", "selector": "navigation.search"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "search.searchInput", "value": "{{trackName}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 800},
+      {"action": "dblclick", "selector": "search.songResults:first-child"}
+    ]
+  },
+  "like": {
+    "description": "Like the current track",
+    "steps": [
+      {"action": "click", "selector": "track.likeButton"}
+    ]
+  },
+  "add-to-queue": {
+    "description": "Add current track to queue",
+    "steps": [
+      {"action": "click", "selector": "track.moreButton"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "track.addToQueue"}
+    ]
+  },
+  "go-home": {
+    "description": "Navigate to home",
+    "steps": [
+      {"action": "click", "selector": "navigation.home"}
+    ]
+  },
+  "go-library": {
+    "description": "Navigate to library",
+    "steps": [
+      {"action": "click", "selector": "navigation.library"}
+    ]
+  },
+  "open-queue": {
+    "description": "Open the play queue",
+    "steps": [
+      {"action": "click", "selector": "navigation.queue"}
+    ]
+  },
+  "get-now-playing": {
+    "description": "Get current track info",
+    "returns": ["trackName", "artistName"],
+    "steps": [
+      {"action": "get", "type": "text", "selector": "nowPlaying.trackName", "as": "trackName"},
+      {"action": "get", "type": "text", "selector": "nowPlaying.artistName", "as": "artistName"}
+    ]
+  }
+}

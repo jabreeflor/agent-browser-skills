@@ -1,0 +1,98 @@
+{
+  "navigation": {
+    "activity": "[data-tid='app-bar-activity']",
+    "chat": "[data-tid='app-bar-chat']",
+    "teams": "[data-tid='app-bar-teams']",
+    "calendar": "[data-tid='app-bar-calendar']",
+    "calls": "[data-tid='app-bar-calls']",
+    "files": "[data-tid='app-bar-files']",
+    "apps": "[data-tid='app-bar-apps']",
+    "search": "[data-tid='search-box']",
+    "settings": "[data-tid='settings-button']",
+    "profile": "[data-tid='profile-button']"
+  },
+  "chat": {
+    "chatList": "[data-tid='chat-list']",
+    "chatItem": "[data-tid='chat-list-item']",
+    "messageInput": "[data-tid='ckeditor-message-input']",
+    "sendButton": "[data-tid='send-message-button']",
+    "attachButton": "[data-tid='attach-button']",
+    "emojiButton": "[data-tid='emoji-button']",
+    "gifButton": "[data-tid='gif-button']",
+    "stickerButton": "[data-tid='sticker-button']",
+    "messageList": "[data-tid='message-list']",
+    "message": "[data-tid='message-item']",
+    "newChat": "[data-tid='new-chat-button']",
+    "searchPeople": "[data-tid='search-people-input']"
+  },
+  "meeting": {
+    "joinButton": "[data-tid='join-meeting-button']",
+    "leaveButton": "[data-tid='leave-call-button']",
+    "muteButton": "[data-tid='toggle-mute-button']",
+    "videoButton": "[data-tid='toggle-video-button']",
+    "shareButton": "[data-tid='share-content-button']",
+    "chatButton": "[data-tid='toggle-chat-button']",
+    "participantsButton": "[data-tid='toggle-participants-button']",
+    "raiseHandButton": "[data-tid='raise-hand-button']",
+    "reactionsButton": "[data-tid='reactions-button']",
+    "moreButton": "[data-tid='more-actions-button']",
+    "participantsList": "[data-tid='participants-list']",
+    "meetingTitle": "[data-tid='meeting-title']",
+    "meetingDuration": "[data-tid='meeting-duration']"
+  },
+  "channels": {
+    "channelList": "[data-tid='channel-list']",
+    "channelItem": "[data-tid='channel-item']",
+    "channelHeader": "[data-tid='channel-header']",
+    "newPost": "[data-tid='new-post-button']",
+    "postInput": "[data-tid='post-input']",
+    "replyInput": "[data-tid='reply-input']",
+    "postList": "[data-tid='post-list']",
+    "postItem": "[data-tid='post-item']"
+  },
+  "teams": {
+    "teamList": "[data-tid='team-list']",
+    "teamItem": "[data-tid='team-item']",
+    "teamHeader": "[data-tid='team-header']",
+    "createTeam": "[data-tid='create-team-button']",
+    "joinTeam": "[data-tid='join-team-button']"
+  },
+  "calendar": {
+    "calendarView": "[data-tid='calendar-view']",
+    "dayView": "[data-tid='day-view']",
+    "weekView": "[data-tid='week-view']",
+    "workWeekView": "[data-tid='work-week-view']",
+    "meetingItem": "[data-tid='meeting-item']",
+    "newMeeting": "[data-tid='new-meeting-button']",
+    "meetNow": "[data-tid='meet-now-button']"
+  },
+  "calls": {
+    "dialpad": "[data-tid='dialpad']",
+    "callHistory": "[data-tid='call-history']",
+    "voicemail": "[data-tid='voicemail']",
+    "contacts": "[data-tid='contacts']",
+    "makeCall": "[data-tid='make-call-button']",
+    "speedDial": "[data-tid='speed-dial']"
+  },
+  "status": {
+    "statusIndicator": "[data-tid='status-indicator']",
+    "statusMenu": "[data-tid='status-menu']",
+    "available": "[data-tid='status-available']",
+    "busy": "[data-tid='status-busy']",
+    "doNotDisturb": "[data-tid='status-dnd']",
+    "away": "[data-tid='status-away']",
+    "offline": "[data-tid='status-offline']"
+  },
+  "notifications": {
+    "notificationPanel": "[data-tid='notification-panel']",
+    "notificationItem": "[data-tid='notification-item']",
+    "unreadBadge": "[data-tid='unread-badge']"
+  },
+  "modal": {
+    "overlay": "[data-tid='modal-overlay']",
+    "dialog": "[data-tid='dialog']",
+    "closeButton": "[data-tid='close-button']",
+    "confirmButton": "[data-tid='confirm-button']",
+    "cancelButton": "[data-tid='cancel-button']"
+  }
+}

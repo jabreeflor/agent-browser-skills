@@ -1,0 +1,110 @@
+{
+  "sidebar": {
+    "collectionList": "[data-testid='collection-list']",
+    "collectionItem": "[data-testid='collection-item']",
+    "folderItem": "[data-testid='folder-item']",
+    "requestItem": "[data-testid='request-item']",
+    "newRequest": "[data-testid='new-request-button']",
+    "newFolder": "[data-testid='new-folder-button']",
+    "newCollection": "[data-testid='new-collection-button']",
+    "importCollection": "[data-testid='import-collection-button']",
+    "searchInput": "[data-testid='search-input']"
+  },
+  "request": {
+    "methodDropdown": "[data-testid='request-method-dropdown']",
+    "urlInput": "[data-testid='request-url-input']",
+    "sendButton": "[data-testid='send-request-button']",
+    "saveButton": "[data-testid='save-request-button']",
+    "tabParams": "[data-testid='tab-params']",
+    "tabHeaders": "[data-testid='tab-headers']",
+    "tabBody": "[data-testid='tab-body']",
+    "tabAuth": "[data-testid='tab-auth']",
+    "tabScript": "[data-testid='tab-script']",
+    "tabTests": "[data-testid='tab-tests']",
+    "tabVars": "[data-testid='tab-vars']"
+  },
+  "params": {
+    "table": "[data-testid='params-table']",
+    "row": "[data-testid='param-row']",
+    "keyInput": "[data-testid='param-key-input']",
+    "valueInput": "[data-testid='param-value-input']",
+    "addButton": "[data-testid='add-param-button']",
+    "deleteButton": "[data-testid='delete-param-button']",
+    "checkbox": "[data-testid='param-checkbox']"
+  },
+  "headers": {
+    "table": "[data-testid='headers-table']",
+    "row": "[data-testid='header-row']",
+    "keyInput": "[data-testid='header-key-input']",
+    "valueInput": "[data-testid='header-value-input']",
+    "addButton": "[data-testid='add-header-button']"
+  },
+  "body": {
+    "typeDropdown": "[data-testid='body-type-dropdown']",
+    "jsonOption": "[data-testid='body-type-json']",
+    "formOption": "[data-testid='body-type-form']",
+    "textOption": "[data-testid='body-type-text']",
+    "noneOption": "[data-testid='body-type-none']",
+    "editor": "[data-testid='body-editor']",
+    "formTable": "[data-testid='body-form-table']"
+  },
+  "auth": {
+    "typeDropdown": "[data-testid='auth-type-dropdown']",
+    "bearerToken": "[data-testid='auth-bearer-token']",
+    "basicUsername": "[data-testid='auth-basic-username']",
+    "basicPassword": "[data-testid='auth-basic-password']",
+    "apiKeyKey": "[data-testid='auth-apikey-key']",
+    "apiKeyValue": "[data-testid='auth-apikey-value']"
+  },
+  "response": {
+    "panel": "[data-testid='response-panel']",
+    "statusCode": "[data-testid='response-status']",
+    "responseTime": "[data-testid='response-time']",
+    "responseSize": "[data-testid='response-size']",
+    "tabBody": "[data-testid='response-tab-body']",
+    "tabHeaders": "[data-testid='response-tab-headers']",
+    "tabTimeline": "[data-testid='response-tab-timeline']",
+    "tabTests": "[data-testid='response-tab-tests']",
+    "bodyContent": "[data-testid='response-body']",
+    "copyButton": "[data-testid='copy-response-button']"
+  },
+  "environment": {
+    "dropdown": "[data-testid='environment-dropdown']",
+    "option": "[data-testid='environment-option']",
+    "noEnvironment": "[data-testid='no-environment']",
+    "manageButton": "[data-testid='manage-environments-button']",
+    "editor": "[data-testid='environment-editor']",
+    "variableRow": "[data-testid='env-variable-row']",
+    "variableName": "[data-testid='env-variable-name']",
+    "variableValue": "[data-testid='env-variable-value']"
+  },
+  "tests": {
+    "editor": "[data-testid='tests-editor']",
+    "runButton": "[data-testid='run-tests-button']",
+    "results": "[data-testid='test-results']",
+    "passedCount": "[data-testid='tests-passed']",
+    "failedCount": "[data-testid='tests-failed']"
+  },
+  "runner": {
+    "runCollection": "[data-testid='run-collection-button']",
+    "runFolder": "[data-testid='run-folder-button']",
+    "progress": "[data-testid='runner-progress']",
+    "results": "[data-testid='runner-results']",
+    "stopButton": "[data-testid='stop-runner-button']"
+  },
+  "modal": {
+    "overlay": "[data-testid='modal-overlay']",
+    "content": "[data-testid='modal-content']",
+    "closeButton": "[data-testid='modal-close']",
+    "confirmButton": "[data-testid='modal-confirm']",
+    "cancelButton": "[data-testid='modal-cancel']",
+    "input": "[data-testid='modal-input']"
+  },
+  "contextMenu": {
+    "menu": "[data-testid='context-menu']",
+    "rename": "[data-testid='context-rename']",
+    "duplicate": "[data-testid='context-duplicate']",
+    "delete": "[data-testid='context-delete']",
+    "clone": "[data-testid='context-clone']"
+  }
+}

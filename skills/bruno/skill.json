@@ -1,0 +1,25 @@
+{
+  "name": "bruno",
+  "displayName": "Bruno API Client",
+  "version": "1.0.0",
+  "description": "Control Bruno API client - requests, collections, environments, testing",
+  "author": "jabreeflor",
+  "app": {
+    "name": "Bruno",
+    "bundleId": "com.usebruno.app",
+    "windowTitle": "Bruno",
+    "process": ["bruno", "Bruno"]
+  },
+  "connection": {
+    "type": "electron",
+    "port": 9224,
+    "launchArgs": ["--remote-debugging-port=9224"]
+  },
+  "capabilities": [
+    "requests",
+    "collections",
+    "environments",
+    "testing",
+    "variables"
+  ]
+}

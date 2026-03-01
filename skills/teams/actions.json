@@ -1,0 +1,173 @@
+{
+  "go-activity": {
+    "description": "Navigate to Activity",
+    "steps": [
+      {"action": "click", "selector": "navigation.activity"}
+    ]
+  },
+  "go-chat": {
+    "description": "Navigate to Chat",
+    "steps": [
+      {"action": "click", "selector": "navigation.chat"}
+    ]
+  },
+  "go-teams": {
+    "description": "Navigate to Teams",
+    "steps": [
+      {"action": "click", "selector": "navigation.teams"}
+    ]
+  },
+  "go-calendar": {
+    "description": "Navigate to Calendar",
+    "steps": [
+      {"action": "click", "selector": "navigation.calendar"}
+    ]
+  },
+  "go-calls": {
+    "description": "Navigate to Calls",
+    "steps": [
+      {"action": "click", "selector": "navigation.calls"}
+    ]
+  },
+  "go-files": {
+    "description": "Navigate to Files",
+    "steps": [
+      {"action": "click", "selector": "navigation.files"}
+    ]
+  },
+  "open-chat": {
+    "description": "Open a chat with a specific person",
+    "params": ["personName"],
+    "steps": [
+      {"action": "click", "selector": "navigation.chat"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "chat.newChat"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "chat.searchPeople", "value": "{{personName}}"},
+      {"action": "wait", "ms": 500},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "send": {
+    "description": "Send a message in current chat",
+    "params": ["message"],
+    "steps": [
+      {"action": "click", "selector": "chat.messageInput"},
+      {"action": "fill", "selector": "chat.messageInput", "value": "{{message}}"},
+      {"action": "click", "selector": "chat.sendButton"}
+    ]
+  },
+  "open-channel": {
+    "description": "Open a specific channel",
+    "params": ["channelName"],
+    "steps": [
+      {"action": "click", "selector": "navigation.teams"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "navigation.search"},
+      {"action": "fill", "selector": "navigation.search", "value": "{{channelName}}"},
+      {"action": "wait", "ms": 500},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "join-meeting": {
+    "description": "Join an active meeting",
+    "steps": [
+      {"action": "click", "selector": "meeting.joinButton"}
+    ]
+  },
+  "leave-meeting": {
+    "description": "Leave current meeting",
+    "steps": [
+      {"action": "click", "selector": "meeting.leaveButton"}
+    ]
+  },
+  "mute": {
+    "description": "Mute microphone",
+    "steps": [
+      {"action": "click", "selector": "meeting.muteButton", "condition": "aria-label contains 'Mute'"}
+    ]
+  },
+  "unmute": {
+    "description": "Unmute microphone",
+    "steps": [
+      {"action": "click", "selector": "meeting.muteButton", "condition": "aria-label contains 'Unmute'"}
+    ]
+  },
+  "toggle-mute": {
+    "description": "Toggle microphone mute",
+    "steps": [
+      {"action": "click", "selector": "meeting.muteButton"}
+    ]
+  },
+  "toggle-video": {
+    "description": "Toggle camera on/off",
+    "steps": [
+      {"action": "click", "selector": "meeting.videoButton"}
+    ]
+  },
+  "share-screen": {
+    "description": "Open share screen menu",
+    "steps": [
+      {"action": "click", "selector": "meeting.shareButton"}
+    ]
+  },
+  "raise-hand": {
+    "description": "Raise hand in meeting",
+    "steps": [
+      {"action": "click", "selector": "meeting.raiseHandButton"}
+    ]
+  },
+  "open-meeting-chat": {
+    "description": "Open meeting chat panel",
+    "steps": [
+      {"action": "click", "selector": "meeting.chatButton"}
+    ]
+  },
+  "show-participants": {
+    "description": "Show participants panel",
+    "steps": [
+      {"action": "click", "selector": "meeting.participantsButton"}
+    ]
+  },
+  "set-status": {
+    "description": "Set availability status",
+    "params": ["status"],
+    "steps": [
+      {"action": "click", "selector": "status.statusIndicator"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "status.{{status}}"}
+    ]
+  },
+  "search": {
+    "description": "Search in Teams",
+    "params": ["query"],
+    "steps": [
+      {"action": "click", "selector": "navigation.search"},
+      {"action": "fill", "selector": "navigation.search", "value": "{{query}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 500}
+    ]
+  },
+  "meet-now": {
+    "description": "Start an instant meeting",
+    "steps": [
+      {"action": "click", "selector": "navigation.calendar"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "calendar.meetNow"}
+    ]
+  },
+  "get-unread": {
+    "description": "Get unread message count",
+    "returns": ["count"],
+    "steps": [
+      {"action": "get", "type": "text", "selector": "notifications.unreadBadge", "as": "count"}
+    ]
+  },
+  "get-status": {
+    "description": "Get current status",
+    "returns": ["status"],
+    "steps": [
+      {"action": "get", "type": "attribute", "selector": "status.statusIndicator", "attribute": "aria-label", "as": "status"}
+    ]
+  }
+}

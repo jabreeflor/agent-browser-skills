@@ -1,0 +1,61 @@
+{
+  "playback": {
+    "playPauseButton": "[data-testid='control-button-playpause']",
+    "nextButton": "[data-testid='control-button-skip-forward']",
+    "previousButton": "[data-testid='control-button-skip-back']",
+    "shuffleButton": "[data-testid='control-button-shuffle']",
+    "repeatButton": "[data-testid='control-button-repeat']",
+    "progressBar": "[data-testid='playback-progressbar']",
+    "volumeBar": "[data-testid='volume-bar']",
+    "muteButton": "[data-testid='volume-button']"
+  },
+  "nowPlaying": {
+    "trackName": "[data-testid='context-item-link']",
+    "artistName": "[data-testid='context-item-info-artist']",
+    "albumArt": "[data-testid='cover-art-image']",
+    "trackDuration": "[data-testid='playback-duration']",
+    "trackProgress": "[data-testid='playback-position']"
+  },
+  "navigation": {
+    "home": "[data-testid='home-button']",
+    "search": "[data-testid='search-button']",
+    "library": "[data-testid='your-library-button']",
+    "createPlaylist": "[data-testid='create-playlist-button']",
+    "likedSongs": "a[href='/collection/tracks']",
+    "queue": "[data-testid='control-button-queue']"
+  },
+  "search": {
+    "searchInput": "[data-testid='search-input']",
+    "searchResults": "[data-testid='search-results']",
+    "topResult": "[data-testid='top-result-card']",
+    "songResults": "[data-testid='tracklist-row']",
+    "artistResults": "[data-testid='artist-card']",
+    "albumResults": "[data-testid='album-card']",
+    "playlistResults": "[data-testid='playlist-card']"
+  },
+  "track": {
+    "likeButton": "[data-testid='add-button']",
+    "moreButton": "[data-testid='more-button']",
+    "addToPlaylist": "[data-testid='add-to-playlist']",
+    "addToQueue": "[data-testid='add-to-queue']",
+    "goToArtist": "[data-testid='go-to-artist']",
+    "goToAlbum": "[data-testid='go-to-album']",
+    "share": "[data-testid='share']"
+  },
+  "playlist": {
+    "playlistHeader": "[data-testid='playlist-header']",
+    "playlistName": "[data-testid='playlist-name']",
+    "playlistImage": "[data-testid='playlist-image']",
+    "playlistPlayButton": "[data-testid='playlist-play-button']",
+    "trackList": "[data-testid='playlist-tracklist']",
+    "trackRow": "[data-testid='tracklist-row']"
+  },
+  "contextMenu": {
+    "menu": "[data-testid='context-menu']",
+    "menuItem": "[data-testid='context-menu-item']"
+  },
+  "modal": {
+    "overlay": "[data-testid='modal-overlay']",
+    "closeButton": "[data-testid='modal-close-button']"
+  }
+}

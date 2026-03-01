@@ -1,0 +1,26 @@
+{
+  "name": "teams",
+  "displayName": "Microsoft Teams",
+  "version": "1.0.0",
+  "description": "Control Microsoft Teams - messaging, meetings, channels, calls",
+  "author": "jabreeflor",
+  "app": {
+    "name": "Microsoft Teams",
+    "bundleId": "com.microsoft.teams2",
+    "windowTitle": "Microsoft Teams",
+    "process": ["Teams", "ms-teams"]
+  },
+  "connection": {
+    "type": "electron",
+    "port": 9223,
+    "launchArgs": ["--remote-debugging-port=9223"]
+  },
+  "capabilities": [
+    "messaging",
+    "meetings",
+    "channels",
+    "calls",
+    "files",
+    "search"
+  ]
+}

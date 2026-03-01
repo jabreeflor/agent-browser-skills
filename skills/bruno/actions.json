@@ -1,0 +1,186 @@
+{
+  "send": {
+    "description": "Send the current request",
+    "steps": [
+      {"action": "click", "selector": "request.sendButton"}
+    ]
+  },
+  "save": {
+    "description": "Save the current request",
+    "steps": [
+      {"action": "click", "selector": "request.saveButton"}
+    ]
+  },
+  "set-method": {
+    "description": "Set HTTP method",
+    "params": ["method"],
+    "steps": [
+      {"action": "click", "selector": "request.methodDropdown"},
+      {"action": "wait", "ms": 100},
+      {"action": "click", "selector": "[data-testid='method-{{method}}']"}
+    ]
+  },
+  "set-url": {
+    "description": "Set request URL",
+    "params": ["url"],
+    "steps": [
+      {"action": "click", "selector": "request.urlInput"},
+      {"action": "fill", "selector": "request.urlInput", "value": "{{url}}"}
+    ]
+  },
+  "request": {
+    "description": "Set URL and send request",
+    "params": ["method", "url"],
+    "steps": [
+      {"action": "click", "selector": "request.methodDropdown"},
+      {"action": "wait", "ms": 100},
+      {"action": "click", "selector": "[data-testid='method-{{method}}']"},
+      {"action": "fill", "selector": "request.urlInput", "value": "{{url}}"},
+      {"action": "click", "selector": "request.sendButton"},
+      {"action": "wait", "ms": 1000}
+    ]
+  },
+  "new-request": {
+    "description": "Create a new request",
+    "steps": [
+      {"action": "click", "selector": "sidebar.newRequest"}
+    ]
+  },
+  "new-collection": {
+    "description": "Create a new collection",
+    "steps": [
+      {"action": "click", "selector": "sidebar.newCollection"}
+    ]
+  },
+  "import-collection": {
+    "description": "Import a collection",
+    "steps": [
+      {"action": "click", "selector": "sidebar.importCollection"}
+    ]
+  },
+  "search": {
+    "description": "Search requests",
+    "params": ["query"],
+    "steps": [
+      {"action": "click", "selector": "sidebar.searchInput"},
+      {"action": "fill", "selector": "sidebar.searchInput", "value": "{{query}}"}
+    ]
+  },
+  "tab-params": {
+    "description": "Switch to Params tab",
+    "steps": [
+      {"action": "click", "selector": "request.tabParams"}
+    ]
+  },
+  "tab-headers": {
+    "description": "Switch to Headers tab",
+    "steps": [
+      {"action": "click", "selector": "request.tabHeaders"}
+    ]
+  },
+  "tab-body": {
+    "description": "Switch to Body tab",
+    "steps": [
+      {"action": "click", "selector": "request.tabBody"}
+    ]
+  },
+  "tab-auth": {
+    "description": "Switch to Auth tab",
+    "steps": [
+      {"action": "click", "selector": "request.tabAuth"}
+    ]
+  },
+  "tab-tests": {
+    "description": "Switch to Tests tab",
+    "steps": [
+      {"action": "click", "selector": "request.tabTests"}
+    ]
+  },
+  "add-header": {
+    "description": "Add a header",
+    "params": ["key", "value"],
+    "steps": [
+      {"action": "click", "selector": "request.tabHeaders"},
+      {"action": "wait", "ms": 100},
+      {"action": "click", "selector": "headers.addButton"},
+      {"action": "fill", "selector": "headers.keyInput:last-child", "value": "{{key}}"},
+      {"action": "fill", "selector": "headers.valueInput:last-child", "value": "{{value}}"}
+    ]
+  },
+  "add-param": {
+    "description": "Add a query parameter",
+    "params": ["key", "value"],
+    "steps": [
+      {"action": "click", "selector": "request.tabParams"},
+      {"action": "wait", "ms": 100},
+      {"action": "click", "selector": "params.addButton"},
+      {"action": "fill", "selector": "params.keyInput:last-child", "value": "{{key}}"},
+      {"action": "fill", "selector": "params.valueInput:last-child", "value": "{{value}}"}
+    ]
+  },
+  "set-body-json": {
+    "description": "Set JSON body",
+    "params": ["json"],
+    "steps": [
+      {"action": "click", "selector": "request.tabBody"},
+      {"action": "wait", "ms": 100},
+      {"action": "click", "selector": "body.typeDropdown"},
+      {"action": "click", "selector": "body.jsonOption"},
+      {"action": "fill", "selector": "body.editor", "value": "{{json}}"}
+    ]
+  },
+  "set-bearer-token": {
+    "description": "Set Bearer token auth",
+    "params": ["token"],
+    "steps": [
+      {"action": "click", "selector": "request.tabAuth"},
+      {"action": "wait", "ms": 100},
+      {"action": "click", "selector": "auth.typeDropdown"},
+      {"action": "click", "selector": "[data-testid='auth-type-bearer']"},
+      {"action": "fill", "selector": "auth.bearerToken", "value": "{{token}}"}
+    ]
+  },
+  "set-environment": {
+    "description": "Select environment",
+    "params": ["envName"],
+    "steps": [
+      {"action": "click", "selector": "environment.dropdown"},
+      {"action": "wait", "ms": 100},
+      {"action": "click", "selector": "[data-testid='env-{{envName}}']"}
+    ]
+  },
+  "run-collection": {
+    "description": "Run all requests in collection",
+    "steps": [
+      {"action": "click", "selector": "runner.runCollection"}
+    ]
+  },
+  "get-response-status": {
+    "description": "Get response status code",
+    "returns": ["status"],
+    "steps": [
+      {"action": "get", "type": "text", "selector": "response.statusCode", "as": "status"}
+    ]
+  },
+  "get-response-time": {
+    "description": "Get response time",
+    "returns": ["time"],
+    "steps": [
+      {"action": "get", "type": "text", "selector": "response.responseTime", "as": "time"}
+    ]
+  },
+  "get-response-body": {
+    "description": "Get response body",
+    "returns": ["body"],
+    "steps": [
+      {"action": "click", "selector": "response.tabBody"},
+      {"action": "get", "type": "text", "selector": "response.bodyContent", "as": "body"}
+    ]
+  },
+  "copy-response": {
+    "description": "Copy response to clipboard",
+    "steps": [
+      {"action": "click", "selector": "response.copyButton"}
+    ]
+  }
+}

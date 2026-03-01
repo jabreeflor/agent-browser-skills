@@ -1,0 +1,23 @@
+{
+  "name": "agent-browser-skills",
+  "version": "1.0.0",
+  "description": "Custom skills for agent-browser - Spotify and Microsoft Teams automation",
+  "author": "jabreeflor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jabreeflor/agent-browser-skills"
+  },
+  "keywords": [
+    "agent-browser",
+    "automation",
+    "spotify",
+    "teams",
+    "electron",
+    "ai-agent"
+  ],
+  "skills": {
+    "spotify": "./skills/spotify",
+    "teams": "./skills/teams"
+  }
+}
