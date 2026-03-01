@@ -8,6 +8,7 @@ Custom skills for [agent-browser](https://github.com/vercel-labs/agent-browser) 
 |-------|-----|-------------|
 | `spotify` | Spotify Desktop | Music playback, search, playlists, library |
 | `teams` | Microsoft Teams | Messaging, meetings, channels, calls |
+| `discord` | Discord Desktop | Messaging, voice channels, servers, DMs, threads |
 | `bruno` | Bruno API Client | HTTP requests, collections, environments, testing |
 
 ## Installation
@@ -18,6 +19,9 @@ npx agent-browser skills add jabreeflor/agent-browser-skills --skill spotify
 
 # Add Teams skill
 npx agent-browser skills add jabreeflor/agent-browser-skills --skill teams
+
+# Add Discord skill
+npx agent-browser skills add jabreeflor/agent-browser-skills --skill discord
 
 # Add Bruno skill
 npx agent-browser skills add jabreeflor/agent-browser-skills --skill bruno
@@ -78,6 +82,43 @@ agent-browser --skill teams go calendar
 # Get state
 agent-browser --skill teams get unread
 agent-browser --skill teams get status
+```
+
+### Discord
+
+```bash
+# Connect to Discord (must be running)
+agent-browser connect discord
+
+# Messaging
+agent-browser --skill discord send "Hello everyone!"
+agent-browser --skill discord reply "I agree!"
+agent-browser --skill discord open-dm "username"
+
+# Voice
+agent-browser --skill discord join-voice "General"
+agent-browser --skill discord leave-voice
+agent-browser --skill discord toggle-mute
+agent-browser --skill discord toggle-deafen
+agent-browser --skill discord share-screen
+
+# Navigation
+agent-browser --skill discord open-server "My Server"
+agent-browser --skill discord open-channel "general"
+agent-browser --skill discord go-home
+
+# Search
+agent-browser --skill discord search "keyword"
+agent-browser --skill discord search-from "username"
+agent-browser --skill discord search-mentions
+
+# Friends
+agent-browser --skill discord show-friends-online
+agent-browser --skill discord add-friend "user#1234"
+
+# Status
+agent-browser --skill discord set-status "dnd"
+agent-browser --skill discord set-custom-status "Coding..."
 ```
 
 ### Bruno

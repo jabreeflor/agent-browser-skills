@@ -1,0 +1,142 @@
+{
+  "navigation": {
+    "serverList": "[aria-label='Servers']",
+    "homeButton": "[data-list-item-id='guildsnav___home']",
+    "dmsButton": "[aria-label='Direct Messages']",
+    "addServer": "[aria-label='Add a Server']",
+    "discoverServers": "[aria-label='Explore Discoverable Servers']",
+    "downloadApps": "[aria-label='Download Apps']",
+    "unreadDms": "[class*='numberBadge']"
+  },
+  "toolbar": {
+    "threads": "[aria-label='Threads']",
+    "notificationSettings": "[aria-label='Notification Settings']",
+    "pinnedMessages": "[aria-label='Pinned Messages']",
+    "memberList": "[aria-label='Show Member List']",
+    "search": "[aria-label='Search']",
+    "inbox": "[aria-label='Inbox']",
+    "help": "[aria-label='Help']"
+  },
+  "channels": {
+    "channelList": "[class*='sidebar'] [class*='scroller']",
+    "channelItem": "[class*='containerDefault']",
+    "channelName": "[class*='channelName']",
+    "categoryHeader": "[class*='containerDefault'][class*='clickable']",
+    "textChannel": "[data-list-item-id*='channels___']",
+    "voiceChannel": "[class*='containerDefault'][class*='wrapper'] [class*='iconItem']",
+    "createChannel": "[aria-label='Create Channel']",
+    "serverHeader": "[class*='header'] [class*='name']",
+    "serverDropdown": "[class*='header'][class*='clickable']"
+  },
+  "chat": {
+    "messageInput": "[role='textbox'][data-slate-editor='true']",
+    "messageList": "[class*='scrollerInner']",
+    "message": "[id^='chat-messages-']",
+    "messageContent": "[class*='messageContent']",
+    "messageAuthor": "[class*='username']",
+    "messageTimestamp": "[class*='timestamp']",
+    "attachButton": "[aria-label='Upload a file or send invites']",
+    "gifButton": "[aria-label='Open GIF picker']",
+    "stickerButton": "[aria-label='Open sticker picker']",
+    "emojiButton": "[aria-label='Open emoji picker']",
+    "replyBar": "[class*='replyBar']",
+    "threadButton": "[aria-label='Create Thread']",
+    "pinButton": "[aria-label='Pin Message']",
+    "editButton": "[aria-label='Edit']",
+    "deleteButton": "[aria-label='Delete']",
+    "reactionButton": "[aria-label='Add Reaction']",
+    "moreButton": "[aria-label='More']"
+  },
+  "voice": {
+    "voicePanel": "[class*='panels'] [class*='connection']",
+    "connectButton": "[class*='panels'] [class*='actionButtons'] button:first-child",
+    "disconnectButton": "[aria-label='Disconnect']",
+    "muteButton": "[aria-label='Mute']",
+    "unmuteButton": "[aria-label='Unmute']",
+    "deafenButton": "[aria-label='Deafen']",
+    "undeafenButton": "[aria-label='Undeafen']",
+    "videoButton": "[aria-label='Turn on Camera']",
+    "screenShareButton": "[aria-label='Share Your Screen']",
+    "voiceConnectedInfo": "[class*='rtcConnectionStatus']",
+    "voiceUsers": "[class*='voiceUser']",
+    "soundboardButton": "[aria-label='Open Soundboard']"
+  },
+  "dms": {
+    "dmList": "[class*='privateChannels'] [class*='scroller']",
+    "dmItem": "[class*='channel'][class*='recipientChannel']",
+    "dmName": "[class*='name']",
+    "dmClose": "[aria-label='Close DM']",
+    "newDmButton": "[aria-label='New Group DM']",
+    "dmSearchInput": "[placeholder*='find or start']",
+    "friendsButton": "[class*='channel'][href='/channels/@me']"
+  },
+  "friends": {
+    "friendsList": "[class*='peopleList']",
+    "friendItem": "[class*='peopleListItem']",
+    "friendName": "[class*='userInfo'] [class*='username']",
+    "onlineTab": "[class*='item'][data-tab-id='ONLINE']",
+    "allTab": "[class*='item'][data-tab-id='ALL']",
+    "pendingTab": "[class*='item'][data-tab-id='PENDING']",
+    "blockedTab": "[class*='item'][data-tab-id='BLOCKED']",
+    "addFriendTab": "[class*='item'][data-tab-id='ADD_FRIEND']",
+    "addFriendInput": "[placeholder*='username']",
+    "sendRequestButton": "[class*='sendButton']"
+  },
+  "server": {
+    "serverName": "[class*='header'] [class*='name']",
+    "serverBanner": "[class*='banner']",
+    "serverBoost": "[aria-label='Server Boost']",
+    "invitePeople": "[aria-label='Invite People']",
+    "serverSettings": "[aria-label='Server Settings']",
+    "memberCount": "[class*='memberCount']"
+  },
+  "search": {
+    "searchBar": "[class*='search'] [class*='searchBar']",
+    "searchInput": "[class*='search'] input",
+    "searchResults": "[class*='searchResultsWrap']",
+    "searchResultItem": "[class*='searchResult']",
+    "searchFilter": "[class*='searchFilter']",
+    "searchAnswer": "[class*='searchAnswer']"
+  },
+  "userArea": {
+    "userPanel": "[class*='panels'] [class*='container']",
+    "avatar": "[class*='panels'] [class*='avatar']",
+    "username": "[class*='panels'] [class*='nameTag']",
+    "micButton": "[aria-label='Mute'], [aria-label='Unmute']",
+    "headphonesButton": "[aria-label='Deafen'], [aria-label='Undeafen']",
+    "settingsButton": "[aria-label='User Settings']"
+  },
+  "status": {
+    "statusPicker": "[class*='statusPicker']",
+    "online": "[id='status-picker-online']",
+    "idle": "[id='status-picker-idle']",
+    "dnd": "[id='status-picker-dnd']",
+    "invisible": "[id='status-picker-invisible']",
+    "customStatus": "[class*='customStatusItem']",
+    "customStatusInput": "[placeholder*='Set a custom status']"
+  },
+  "threads": {
+    "threadPanel": "[class*='container'][class*='thread']",
+    "threadList": "[class*='container'] [class*='list']",
+    "threadItem": "[class*='container'] [class*='item']",
+    "threadName": "[class*='container'] [class*='name']",
+    "createThread": "[aria-label='Create Thread']",
+    "threadNameInput": "[placeholder*='Thread Name']"
+  },
+  "modal": {
+    "overlay": "[class*='backdrop']",
+    "dialog": "[class*='modal'] [class*='root']",
+    "closeButton": "[aria-label='Close']",
+    "confirmButton": "[class*='confirmButton']",
+    "cancelButton": "[class*='cancelButton']"
+  },
+  "contextMenu": {
+    "menu": "[class*='menu'][role='menu']",
+    "menuItem": "[class*='item'][role='menuitem']"
+  },
+  "notifications": {
+    "mentionBadge": "[class*='numberBadge']",
+    "unreadIndicator": "[class*='unread']",
+    "newMessageBar": "[class*='newMessagesBar']"
+  }
+}

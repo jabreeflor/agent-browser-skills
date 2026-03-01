@@ -1,0 +1,300 @@
+{
+  "go-home": {
+    "description": "Navigate to Home / DMs",
+    "steps": [
+      {"action": "click", "selector": "navigation.homeButton"}
+    ]
+  },
+  "go-dms": {
+    "description": "Navigate to Direct Messages",
+    "steps": [
+      {"action": "click", "selector": "navigation.homeButton"},
+      {"action": "wait", "ms": 300}
+    ]
+  },
+  "open-dm": {
+    "description": "Open a DM with a specific user",
+    "params": ["username"],
+    "steps": [
+      {"action": "click", "selector": "navigation.homeButton"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "dms.dmSearchInput"},
+      {"action": "fill", "selector": "dms.dmSearchInput", "value": "{{username}}"},
+      {"action": "wait", "ms": 500},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "send": {
+    "description": "Send a message in current channel/DM",
+    "params": ["message"],
+    "steps": [
+      {"action": "click", "selector": "chat.messageInput"},
+      {"action": "fill", "selector": "chat.messageInput", "value": "{{message}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "reply": {
+    "description": "Reply to the last message",
+    "params": ["message"],
+    "steps": [
+      {"action": "hover", "selector": "chat.message:last-child"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "chat.message:last-child [aria-label='Reply']"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "chat.messageInput", "value": "{{message}}"},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "open-channel": {
+    "description": "Open a specific text channel",
+    "params": ["channelName"],
+    "steps": [
+      {"action": "click", "selector": "toolbar.search"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "search.searchInput", "value": "in: {{channelName}}"},
+      {"action": "wait", "ms": 500},
+      {"action": "press", "key": "Escape"},
+      {"action": "wait", "ms": 200}
+    ]
+  },
+  "open-server": {
+    "description": "Open a server by clicking it in the sidebar",
+    "params": ["serverName"],
+    "steps": [
+      {"action": "click", "selector": "[aria-label='{{serverName}}']"},
+      {"action": "wait", "ms": 300}
+    ]
+  },
+  "join-voice": {
+    "description": "Join a voice channel by name",
+    "params": ["channelName"],
+    "steps": [
+      {"action": "click", "selector": "[aria-label='{{channelName}} (voice)']"},
+      {"action": "wait", "ms": 500}
+    ]
+  },
+  "leave-voice": {
+    "description": "Disconnect from voice channel",
+    "steps": [
+      {"action": "click", "selector": "voice.disconnectButton"}
+    ]
+  },
+  "mute": {
+    "description": "Mute microphone",
+    "steps": [
+      {"action": "click", "selector": "voice.muteButton", "condition": "aria-label contains 'Mute'"}
+    ]
+  },
+  "unmute": {
+    "description": "Unmute microphone",
+    "steps": [
+      {"action": "click", "selector": "voice.unmuteButton", "condition": "aria-label contains 'Unmute'"}
+    ]
+  },
+  "toggle-mute": {
+    "description": "Toggle microphone mute",
+    "steps": [
+      {"action": "click", "selector": "userArea.micButton"}
+    ]
+  },
+  "deafen": {
+    "description": "Deafen audio",
+    "steps": [
+      {"action": "click", "selector": "voice.deafenButton", "condition": "aria-label contains 'Deafen'"}
+    ]
+  },
+  "undeafen": {
+    "description": "Undeafen audio",
+    "steps": [
+      {"action": "click", "selector": "voice.undeafenButton", "condition": "aria-label contains 'Undeafen'"}
+    ]
+  },
+  "toggle-deafen": {
+    "description": "Toggle deafen",
+    "steps": [
+      {"action": "click", "selector": "userArea.headphonesButton"}
+    ]
+  },
+  "toggle-video": {
+    "description": "Toggle camera on/off in voice",
+    "steps": [
+      {"action": "click", "selector": "voice.videoButton"}
+    ]
+  },
+  "share-screen": {
+    "description": "Start screen sharing in voice",
+    "steps": [
+      {"action": "click", "selector": "voice.screenShareButton"}
+    ]
+  },
+  "search": {
+    "description": "Search messages",
+    "params": ["query"],
+    "steps": [
+      {"action": "click", "selector": "toolbar.search"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "search.searchInput", "value": "{{query}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 500}
+    ]
+  },
+  "search-from": {
+    "description": "Search messages from a specific user",
+    "params": ["username"],
+    "steps": [
+      {"action": "click", "selector": "toolbar.search"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "search.searchInput", "value": "from: {{username}}"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 500}
+    ]
+  },
+  "search-mentions": {
+    "description": "Search your mentions",
+    "steps": [
+      {"action": "click", "selector": "toolbar.search"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "search.searchInput", "value": "mentions: me"},
+      {"action": "press", "key": "Enter"},
+      {"action": "wait", "ms": 500}
+    ]
+  },
+  "open-threads": {
+    "description": "Open threads panel",
+    "steps": [
+      {"action": "click", "selector": "toolbar.threads"}
+    ]
+  },
+  "open-pinned": {
+    "description": "Open pinned messages",
+    "steps": [
+      {"action": "click", "selector": "toolbar.pinnedMessages"}
+    ]
+  },
+  "toggle-member-list": {
+    "description": "Toggle the member list sidebar",
+    "steps": [
+      {"action": "click", "selector": "toolbar.memberList"}
+    ]
+  },
+  "open-inbox": {
+    "description": "Open notification inbox",
+    "steps": [
+      {"action": "click", "selector": "toolbar.inbox"}
+    ]
+  },
+  "set-status": {
+    "description": "Set online status",
+    "params": ["status"],
+    "steps": [
+      {"action": "click", "selector": "userArea.avatar"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "status.{{status}}"}
+    ]
+  },
+  "set-custom-status": {
+    "description": "Set a custom status message",
+    "params": ["statusText"],
+    "steps": [
+      {"action": "click", "selector": "userArea.avatar"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "status.customStatus"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "status.customStatusInput", "value": "{{statusText}}"},
+      {"action": "wait", "ms": 200},
+      {"action": "press", "key": "Enter"}
+    ]
+  },
+  "open-settings": {
+    "description": "Open user settings",
+    "steps": [
+      {"action": "click", "selector": "userArea.settingsButton"}
+    ]
+  },
+  "add-reaction": {
+    "description": "Add a reaction to the last message",
+    "params": ["emoji"],
+    "steps": [
+      {"action": "hover", "selector": "chat.message:last-child"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "chat.message:last-child [aria-label='Add Reaction']"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "[class*='emojiPicker'] input", "value": "{{emoji}}"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "[class*='emojiPicker'] [class*='result']:first-child"}
+    ]
+  },
+  "create-thread": {
+    "description": "Create a new thread on the last message",
+    "params": ["threadName"],
+    "steps": [
+      {"action": "hover", "selector": "chat.message:last-child"},
+      {"action": "wait", "ms": 200},
+      {"action": "click", "selector": "chat.message:last-child [aria-label='Create Thread']"},
+      {"action": "wait", "ms": 300},
+      {"action": "fill", "selector": "threads.threadNameInput", "value": "{{threadName}}"}
+    ]
+  },
+  "open-soundboard": {
+    "description": "Open soundboard in voice channel",
+    "steps": [
+      {"action": "click", "selector": "voice.soundboardButton"}
+    ]
+  },
+  "invite-people": {
+    "description": "Open the server invite dialog",
+    "steps": [
+      {"action": "click", "selector": "server.invitePeople"}
+    ]
+  },
+  "show-friends-online": {
+    "description": "Show online friends",
+    "steps": [
+      {"action": "click", "selector": "navigation.homeButton"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "friends.onlineTab"}
+    ]
+  },
+  "show-friends-all": {
+    "description": "Show all friends",
+    "steps": [
+      {"action": "click", "selector": "navigation.homeButton"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "friends.allTab"}
+    ]
+  },
+  "show-friends-pending": {
+    "description": "Show pending friend requests",
+    "steps": [
+      {"action": "click", "selector": "navigation.homeButton"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "friends.pendingTab"}
+    ]
+  },
+  "add-friend": {
+    "description": "Send a friend request",
+    "params": ["username"],
+    "steps": [
+      {"action": "click", "selector": "navigation.homeButton"},
+      {"action": "wait", "ms": 300},
+      {"action": "click", "selector": "friends.addFriendTab"},
+      {"action": "wait", "ms": 200},
+      {"action": "fill", "selector": "friends.addFriendInput", "value": "{{username}}"},
+      {"action": "click", "selector": "friends.sendRequestButton"}
+    ]
+  },
+  "get-voice-status": {
+    "description": "Get current voice connection status",
+    "returns": ["status"],
+    "steps": [
+      {"action": "get", "type": "text", "selector": "voice.voiceConnectedInfo", "as": "status"}
+    ]
+  },
+  "get-server-name": {
+    "description": "Get current server name",
+    "returns": ["name"],
+    "steps": [
+      {"action": "get", "type": "text", "selector": "server.serverName", "as": "name"}
+    ]
+  }
+}

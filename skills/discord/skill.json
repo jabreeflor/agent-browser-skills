@@ -1,0 +1,28 @@
+{
+  "name": "discord",
+  "displayName": "Discord",
+  "version": "1.0.0",
+  "description": "Control Discord Desktop - messaging, voice channels, servers, DMs, threads",
+  "author": "jabreeflor",
+  "app": {
+    "name": "Discord",
+    "bundleId": "com.hnc.Discord",
+    "windowTitle": "Discord",
+    "process": ["Discord", "discord"]
+  },
+  "connection": {
+    "type": "electron",
+    "port": 9225,
+    "launchArgs": ["--remote-debugging-port=9225"]
+  },
+  "capabilities": [
+    "messaging",
+    "voice",
+    "servers",
+    "channels",
+    "dms",
+    "threads",
+    "search",
+    "status"
+  ]
+}
